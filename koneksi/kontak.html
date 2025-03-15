@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Aplikasi Kontak</title>
+	<meta name="viewport" content="width=device-width intial-scale1">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<style type="text/css">
+		@import url(<a class="vglnk" href="https://fonts.googleapis.com/css?family=Roboto:400,300,600,400italic" rel="nofollow"><span>https</span><span>://</span><span>fonts</span><span>.</span><span>googleapis</span><span>.</span><span>com</span><span>/</span><span>css</span><span>?</span><span>family</span><span>=</span><span>Roboto</span><span>:</span><span>400</span><span>,</span><span>300</span><span>,</span><span>600</span><span>,</span><span>400italic</span></a>);
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+  -o-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+  
+body {
+  font-family: "Roboto", Helvetica, Arial, sans-serif;
+  font-weight: 100;
+  font-size: 12px;
+  line-height: 30px;
+  color: #777;
+  background: #4CAF50;
+}
+  
+.container {
+  max-width: 400px;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+}
+  
+#contact input[type="text"],
+#contact input[type="email"],
+#contact input[type="tel"],
+#contact input[type="url"],
+#contact textarea,
+#contact button[type="submit"] {
+  font: 400 12px/16px "Roboto", Helvetica, Arial, sans-serif;
+}
+  
+#contact {
+  background: #F9F9F9;
+  padding: 25px;
+  margin: 150px 0;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+  
+#contact h3 {
+  display: block;
+  font-size: 30px;
+  font-weight: 300;
+  margin-bottom: 10px;
+}
+  
+#contact h4 {
+  margin: 5px 0 15px;
+  display: block;
+  font-size: 13px;
+  font-weight: 400;
+}
+  
+fieldset {
+  border: medium none !important;
+  margin: 0 0 10px;
+  min-width: 100%;
+  padding: 0;
+  width: 100%;
+}
+  
+#contact input[type="text"],
+#contact input[type="email"],
+#contact input[type="tel"],
+#contact input[type="url"],
+#contact textarea {
+  width: 100%;
+  border: 1px solid #ccc;
+  background: #FFF;
+  margin: 0 0 5px;
+  padding: 10px;
+}
+  
+#contact input[type="text"]:hover,
+#contact input[type="email"]:hover,
+#contact input[type="tel"]:hover,
+#contact input[type="url"]:hover,
+#contact textarea:hover {
+  -webkit-transition: border-color 0.3s ease-in-out;
+  -moz-transition: border-color 0.3s ease-in-out;
+  transition: border-color 0.3s ease-in-out;
+  border: 1px solid #aaa;
+}
+  
+#contact textarea {
+  height: 100px;
+  max-width: 100%;
+  resize: none;
+}
+  
+#contact button[type="submit"] {
+  cursor: pointer;
+  width: 100%;
+  border: none;
+  background: #4CAF50;
+  color: #FFF;
+  margin: 0 0 5px;
+  padding: 10px;
+  font-size: 15px;
+}
+  
+#contact button[type="submit"]:hover {
+  background: #43A047;
+  -webkit-transition: background 0.3s ease-in-out;
+  -moz-transition: background 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out;
+}
+  
+#contact button[type="submit"]:active {
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.5);
+}
+  
+.copyright {
+  text-align: center;
+}
+  
+#contact input:focus,
+#contact textarea:focus {
+  outline: 0;
+  border: 1px solid #aaa;
+}
+  
+::-webkit-input-placeholder {
+  color: #888;
+}
+  
+:-moz-placeholder {
+  color: #888;
+}
+  
+::-moz-placeholder {
+  color: #888;
+}
+  
+:-ms-input-placeholder {
+  color: #888;
+}
+  
+.notify {
+    padding: 10px;
+    background-color: #FFD76E;
+    margin-bottom: 10px;
+    border-radius: 3px;
+    font-weight: bold;
+	</style>
+</head>
+<body bgcolor="blue">
+	<div class="container" id="container">
+		<form id="Kontak" action="<?php $_SERVER['PHP SELF']?"method="POST">
+		<?php if empty($notify)) { ?>
+		}
+			<p class="notify"<?php echo !empty($notifyClass)? $notifyClass="; ?>"<?php echo $notify; ?></p>
+		<php } ?>
+			<h3>Kontak Form</h3>
+			<h4>Untuk pertanyaan, dan juga komentar, sekaligus sarang anda, seputar pelayanan kami, Mohon untuk menghubungi kami.. Dan silahkan mengisi Form dibawah ini degan benar:</h4>
+		<fieldset>
+			<label>Nama:</label>
+				<input type="text" name="nama" placeholder="Nama Anda" size="79">
+			<label>Email:</label>
+				<input type="text" name="email" placeholder="Email" size="79">
+			<label>Pesan:</label>
+				<textarea></textarea>
+		<fieldset>
+			<button name="submit" type="submit" id="kontak-submit" data-submit="Mengirimkan Pesan">Kirim</button>	
+				</fieldset>
+			</form>
+		</div>
+	</body>
+</html>
